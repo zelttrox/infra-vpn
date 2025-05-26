@@ -11,6 +11,17 @@ git clone https://github.com/zelttrox/install-vpn.git
 sudo bash install.sh
 ```
 
+3. Installation Tkinter pour Python
+
+Ubuntu
+```bash
+sudo apt install python3-tk
+```
+Arch
+```bash
+sudo pacman -S tk
+```
+
 ## Lancement avec interface graphique
 Une fois le VPN installé, on peut lancer l'app Pyton
 ```bash
