@@ -12,7 +12,7 @@ InstallVPN() {
 
     # Check dependencies
     if [ -d "/etc/wireguard" ]; then
-        echo "  󰄲 Dependencies checked."
+        echo -e "\e[32m  󰄲 Dependencies checked."
     else
         echo -e "\e[31mWireguard is not installed. Please install it before processing. \e[0m"
         echo
@@ -29,11 +29,15 @@ InstallVPN() {
     # Apply network settings
     > /etc/wireguard/client.conf
     cat src/settings.conf >> /etc/wireguard/client.conf
-    echo "  󰄲 Network settings applied."
+    echo -e "\e[32m  󰄲 Network settings applied."
 
     # Setup app
     chmod +x src/vpn_up.sh src/vpn_down.sh
-    echo "  󰄲 Permissions changed."
+    echo -e "\e[32m  󰄲 Permissions changed.\e[0m"
+
+    echo
+    echo "Installation complete."
+    echo -e "\e[36mYou can launch the app using 'python3 app.py'.\e[0m"
 }
 
 # Confirm install
