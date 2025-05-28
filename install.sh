@@ -29,6 +29,7 @@ InstallVPN() {
 
     # Apply network settings
     sleep 0.2
+    touch /etc/wireguard/client.conf
     > /etc/wireguard/client.conf
     cat src/settings.conf >> /etc/wireguard/client.conf
     # echo "PrivateKey = $private_key" >> /etc/wireguard/client.conf
