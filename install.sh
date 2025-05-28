@@ -33,7 +33,7 @@ InstallVPN() {
     cat src/settings.conf >> /etc/wireguard/client.conf
     echo "PrivateKey = $private_key" >> /etc/wireguard/client.conf
     echo -e "\e[32m  󰄲 Network settings applied."
-
+    
     # Setup app
     sleep 0.2
     chmod +x src/vpn_up.sh src/vpn_down.sh
