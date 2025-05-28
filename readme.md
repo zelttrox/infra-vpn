@@ -29,14 +29,19 @@ Arch
  sudo pacman -S wireguard-tools openresolv
 ```
 
-2. Ajouter les paramètres réseaux nécessaires
+2. Génération d'une clé privée
+```bash
+wg genkey
+```
+
+3. Ajouter les paramètres réseaux nécessaires
 ```bash
 sudo tee /etc/wireguard/client.conf
 ```
 Copier/coller les paramètres réseaux
 ```
 [Interface]
-PrivateKey = MM+RdmFoTKDpNzpY17lbCCEWhUI2GOi0pRlGt3huCFo=
+PrivateKey = #
 Address = 10.0.0.2/24
 DNS = 1.1.1.1, 8.8.8.8
 
@@ -47,6 +52,25 @@ Endpoint = 132.220.9.90:51820
 AllowedIPs = 0.0.0.0/0
 PersistentKeepalive = 25
 ```
+
+## Makefile
+Installation
+```bash
+make install
+```
+Désinstallation
+```bash
+make uninstall
+```
+Démarrage VPN
+```bash
+make on
+```
+Arrêt VPN
+```bash
+make off
+```
+
 
 ## Lancement avec Terminal
 Démarrage du VPN
