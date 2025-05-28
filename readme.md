@@ -8,7 +8,7 @@ git clone https://github.com/zelttrox/install-vpn.git
 ```
 2. Lancement du script d'installation
 ```bash
-sudo bash install.sh
+make install
 ```
 
 ## Lancement avec interface graphique
@@ -16,6 +16,12 @@ Une fois le VPN installé, on peut lancer l'app Pyton
 ```bash
 python3 app.py
 ```
+
+## Désinstallation
+```bash
+make uninstall
+```
+
 
 ## Installation manuelle
 1. Installation Wireguard
