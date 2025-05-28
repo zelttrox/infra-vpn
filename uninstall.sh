@@ -21,8 +21,7 @@ UninstallVPN() {
     # End
     sleep 0.2
     echo
-    echo "Uninstallation complete."
-    echo -e "\e[36mWe hope we'll you again soon'.\e[0m"
+    echo -e "\e[36mUninstallation complete.\e[0m"
 }
 
 # Begin uninstall

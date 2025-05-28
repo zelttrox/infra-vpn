@@ -20,18 +20,18 @@ InstallVPN() {
     fi
 
     # Generate private key
-    sleep 0.2
-    mkdir -p keys && umask 077
-    touch keys/private.key && chmod 600 keys/private.key
-    wg genkey > keys/private.key
-    private_key=$(cat keys/private.key)
-    echo -e "\e[32m  󰄲 Private key generated."
+    # sleep 0.2
+    # mkdir -p keys && umask 077
+    # touch keys/private.key && chmod 600 keys/private.key
+    # wg genkey > keys/private.key
+    # private_key=$(cat keys/private.key)
+    # echo -e "\e[32m  󰄲 Private key generated."
 
     # Apply network settings
     sleep 0.2
     > /etc/wireguard/client.conf
     cat src/settings.conf >> /etc/wireguard/client.conf
-    echo "PrivateKey = $private_key" >> /etc/wireguard/client.conf
+    # echo "PrivateKey = $private_key" >> /etc/wireguard/client.conf
     echo -e "\e[32m  󰄲 Network settings applied."
     
     # Setup app
