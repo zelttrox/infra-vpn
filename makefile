@@ -1,3 +1,5 @@
+install:
+	sudo bash install.sh
 on:
 	sudo wg-quick up client
 
